@@ -1,7 +1,7 @@
 require_relative "../spec_helper"
 require_relative "../../app/service"
 
-describe 'GET /ping' do
+RSpec.describe 'GET /ping' do
   def app
     Service
   end
