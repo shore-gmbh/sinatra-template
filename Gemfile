@@ -8,6 +8,7 @@ gem "sinatra", "~> 1.4"
 
 group :development do
   gem "rake", "~> 10.0"
+  gem 'rubocop', '>= 0.31.0', require: false
 end
 
 group :test, :development do
