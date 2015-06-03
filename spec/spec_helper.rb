@@ -10,9 +10,8 @@ require "find"
   Find.find(load_path) { |f| require f if f.match(/\.rb$/) }
 end
 
-Dir['spec/support/**/*.rb'].each do |f|
-  require(File.expand_path('../../' + f, __FILE__))
-end
+# Load support files
+Dir[File.dirname(__FILE__) + '/support/*.rb'].each { |f| require f }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
