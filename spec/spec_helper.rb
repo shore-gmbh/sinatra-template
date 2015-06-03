@@ -1,9 +1,9 @@
+ENV['RACK_ENV'] = 'test'
+
 require 'bundler'
 
 Bundler.setup
-Bundler.require
-
-ENV["RACK_ENV"] = "test"
+Bundler.require(:default, ENV['RACK_ENV'])
 
 require 'minitest/pride'
 require 'minitest/autorun'
