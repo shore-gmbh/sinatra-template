@@ -1,5 +1,3 @@
-require_relative "../../app/service"
-
 RSpec.describe 'GET /ping', type: :request do
   it "responds with status 200" do
     get '/ping'
