@@ -12,6 +12,10 @@ require "find"
   Find.find(load_path) { |f| require f if f.match(/\.rb$/) }
 end
 
+Dir['spec/support/**/*.rb'].each do |f|
+  require(File.expand_path('../../' + f, __FILE__))
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
