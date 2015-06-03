@@ -1,5 +1,8 @@
 ## Git Hooks (powered by [overcommit][1])
 
+You have the run the following command after cloning this repository to activate
+our Git Hooks:
+
 ```sh
 $ bundle exec overcommit --install
 ```
