@@ -15,3 +15,7 @@ end
 group :test, :development do
   gem 'pry-byebug'
 end
+
+group :test do
+  gem 'rspec', '>= 3.2.0'
+end
