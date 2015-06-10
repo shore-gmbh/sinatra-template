@@ -4,6 +4,7 @@ ruby File.read('.ruby-version').match(/\d\.\d.\d/)[0]
 
 # App Stack
 gem 'sinatra', '~> 1.4'
+gem 'puma', '>= 2.11.3'
 
 group :development do
   gem 'rake', '~> 10.0'

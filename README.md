@@ -1,6 +1,18 @@
 # Shore Sinatra Template
 [![Build Status](https://travis-ci.org/shore-gmbh/sinatra-template.svg?branch=master)](https://travis-ci.org/shore-gmbh/sinatra-template)
 
+## Usage
+
+The easiest way to start the project is [`foreman`][1]. After you've installed
+`foreman` on your system (i.e. `gem install foreman`), you can start the HTTP
+server and all required background jobs with a single command:
+
+```sh
+$ foreman start -p 5000
+```
+
+[1]: https://github.com/ddollar/foreman
+
 ## Git Hooks (powered by [overcommit][1])
 
 You have the run the following command after cloning this repository to activate

@@ -27,6 +27,8 @@ GEM
     pry-byebug (3.1.0)
       byebug (~> 4.0)
       pry (~> 0.10)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -67,6 +69,7 @@ PLATFORMS
 DEPENDENCIES
   overcommit (>= 0.25.0)
   pry-byebug
+  puma (>= 2.11.3)
   rack-test (~> 0.6)
   rake (~> 10.0)
   rspec (>= 3.2.0)
