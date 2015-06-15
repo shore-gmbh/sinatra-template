@@ -26,7 +26,7 @@ class Service < Sinatra::Base
     OpenStruct.new(id: '1', oid: '1', name: 'foo'),
     OpenStruct.new(id: '2', oid: '1', name: 'bar'),
     OpenStruct.new(id: '3', oid: '1', name: 'baz')
-  ].freeze
+  ]
 
   ##
   # GET /v1/:oid/documents - Return all documents
@@ -54,7 +54,10 @@ class Service < Sinatra::Base
   #     ]
   #   }
   get '/v1/:oid/documents', provides: :json do |oid|
-    @documents = DOCUMENTS.select { |d| d.oid == oid }
+    documents = DOCUMENTS.select { |d| d.oid == oid }
+    @documents = Kaminari.paginate_array(documents)
+                 .page(params[:page])
+                 .per(params[:per])
 
     jbuilder :index
   end
