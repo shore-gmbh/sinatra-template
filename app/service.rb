@@ -4,15 +4,29 @@ require 'sinatra/base'
 # Add your documentation for the HTTP service here.
 class Service < Sinatra::Base
   ##
-  # GET /ping - Return serice ping
+  # GET /ping - Health check
   #
-  # ## Response
+  # ## Response Code
+  #
+  #   200
+  #
+  # ## Response Body
   #
   #   {}
   #
   get '/ping', provides: :json do
     [200, '{}']
   end
+
+  ##
+  # Stub for a collection of documents.
+  # Remove when starting real implementation.
+  #
+  DOCUMENTS = [
+    OpenStruct.new(id: '1', oid: '1', name: 'foo'),
+    OpenStruct.new(id: '2', oid: '1', name: 'bar'),
+    OpenStruct.new(id: '3', oid: '1', name: 'baz')
+  ].freeze
 
   ##
   # GET /v1/:oid/documents - Return all documents
@@ -39,7 +53,34 @@ class Service < Sinatra::Base
   #       { ... }
   #     ]
   #   }
-  get '/v1/:oid/documents' do
-    # ... add implementation here ...
+  get '/v1/:oid/documents', provides: :json do |oid|
+    @documents = DOCUMENTS.select { |d| d.oid == oid }
+
+    jbuilder :index
+  end
+
+  ##
+  # GET /v1/:oid/documents/:id - Return a single document
+  #
+  # ## Request parameters
+  #
+  #   oid [String] The organization id
+  #   id [String] The document id
+  #
+  # ## Response Code
+  #
+  #   200
+  #
+  # ## Response Body
+  #
+  #   {
+  #     id: '522f78b8-6f39-4dce-be8e-ce0fc0f816e6',
+  #     ...
+  #   }
+  get '/v1/:oid/documents/:id', provides: :json do |oid, id|
+    @document = DOCUMENTS.find { |d| d.oid == oid && d.id == id }
+    halt 404 unless @document
+
+    jbuilder :show
   end
 end

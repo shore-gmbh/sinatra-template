@@ -6,6 +6,10 @@ ruby File.read('.ruby-version').match(/\d\.\d.\d/)[0]
 gem 'sinatra', '~> 1.4'
 gem 'puma', '>= 2.11.3'
 
+# rendering
+gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
+gem 'multi_json'
+
 group :development do
   gem 'rake', '~> 10.0'
   gem 'rubocop', '>= 0.31.0', require: false
