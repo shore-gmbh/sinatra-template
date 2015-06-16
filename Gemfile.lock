@@ -132,3 +132,6 @@ DEPENDENCIES
   rubocop (>= 0.31.0)
   sinatra (~> 1.4)
   tilt-jbuilder
+
+BUNDLED WITH
+   1.10.3

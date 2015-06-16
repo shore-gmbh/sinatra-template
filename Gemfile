@@ -2,7 +2,7 @@ source 'https://rubygems.org/'
 
 ruby File.read('.ruby-version').match(/\d\.\d.\d/)[0]
 
-# pplication
+# application
 gem 'sinatra', '~> 1.4'
 gem 'puma', '>= 2.11.3'
 
