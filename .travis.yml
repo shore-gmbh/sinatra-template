@@ -1,4 +1,4 @@
 language: ruby
 
-script: "bundle exec rspec"
+script: 'bundle exec rspec --format=documentation'
 
