@@ -1,3 +1,5 @@
+require 'rack/test'
+require 'json_spec'
 require_relative(File.expand_path('../../../app/service', __FILE__))
 
 RSpec.configure do |config|
