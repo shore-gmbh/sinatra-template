@@ -1,5 +1,11 @@
 language: ruby
 script: bundle exec rspec --format=documentation
+
+branches:
+  only:
+    - master
+    - /^release\/.+$/
+
 notifications:
   slack:
     secure: szUSTe9qge671kSL2X1dBu7XKM7whiivGkOV6o9RMrm0ZZHb9BbtKqK3BpgDBoYsw6gyQhFdxlArHoxBOKgkxdpiXV3hX/vJn4d+tlOOkFk4CO+xlVahLfAzXVG0nUc4kZtQf1H4TtwGNlzL1982iuZiUbTyJ6nsgLtVO+eqNN/wD5zUjlGaXwSBo+AxESghlQt5f+7r+Z+H82x8DJQ7uEP55Hccx7iGpQByyqyysN82UDEJ2bGE6g67osRNmpA5J5o2LFDB/pu1CMsBO93XNft60TZOoHWMjrLVEtdhsph9kKSeXrfz8UvikzLOKca5N833xRxybSCY/RR4+uZgVSb5MFCQoZ0r2/b8DegR5scKBc+CuKRU7biadnHW+5ToJEAMi2gdNeea5/pOjqIzAU9X4Px4Vl4g8ZM6aG1XhS9l/Ii3iuhIg2nTyLWxU5PVIWQ2heJ1OgkufOiiwjcGnXV5r8beqvV4qJAR+kBccR1dVl3HCMxgVk124STaq6PGHQ772HDHiLT15M1yd8juwD1Y8i9q5CPghPBRGvDBcvx35sQJkRRfqqblLwdxtCGxrhV09RRUv3CAvmcaXlYF+KmKqh6WsRXBMZ7TW1oOtC70+OxSueiXTxdHRMtD7/DPY2xPHBoYk20LfB5iwG5SiBRqz49rgP7AHrI0wIWYDeo=
