@@ -1,4 +1,3 @@
-require 'active_job'
 require 'rspec/active_job'
 
 ActiveJob::Base.queue_adapter = :test
