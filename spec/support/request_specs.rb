@@ -1,4 +1,4 @@
-require_relative(File.expand_path('../../../app/service', __FILE__))
+require_relative '../../app/service'
 
 RSpec.configure do |config|
   config.include(JsonSpec::Helpers, type: :request)
