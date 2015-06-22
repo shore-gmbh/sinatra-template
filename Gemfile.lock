@@ -96,6 +96,9 @@ GEM
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
       rspec-mocks (~> 3.3.0)
+    rspec-activejob (0.4.1)
+      activejob (>= 4.2)
+      rspec-mocks
     rspec-core (3.3.0)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.0)
@@ -141,6 +144,7 @@ DEPENDENCIES
   rack-test (~> 0.6)
   rake (~> 10.0)
   rspec (>= 3.2.0)
+  rspec-activejob (>= 0.4.1)
   rubocop (>= 0.31.0)
   sinatra (~> 1.4)
   tilt-jbuilder

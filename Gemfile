@@ -38,6 +38,7 @@ end
 
 group :test do
   gem 'rspec', '>= 3.2.0'
+  gem 'rspec-activejob', '>= 0.4.1'
   gem 'rack-test', '~> 0.6'
   gem 'json_spec'
 end
