@@ -2,15 +2,15 @@ source 'https://rubygems.org/'
 
 ruby File.read('.ruby-version').match(/\d\.\d.\d/)[0]
 
-# application
+# Application:
 gem 'sinatra', '~> 1.4'
 gem 'puma', '>= 2.11.3'
 
-# rendering
+# Rendering:
 gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 gem 'multi_json'
 
-# persistence
+# Persistence:
 gem 'kaminari'
 # gem 'mongoid'
 # gem 'activerecord'
@@ -20,6 +20,11 @@ gem 'kaminari'
 # Exception and Performance Tracking:
 gem 'airbrake',     '>= 4.1.0'
 gem 'newrelic_rpm', '>= 3.11.2.286'
+
+# Asynchronous Processing:
+gem 'activejob', '>= 4.2.1'
+# gem 'sidekiq'
+# gem 'delayed_job'
 
 group :development do
   gem 'rake', '~> 10.0'
