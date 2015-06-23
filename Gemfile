@@ -22,7 +22,7 @@ gem 'airbrake',     '>= 4.1.0'
 gem 'newrelic_rpm', '>= 3.11.2.286'
 
 # Asynchronous Processing:
-gem 'activejob', '>= 4.2.1'
+gem 'activejob', '>= 4.2.1', require: 'active_job'
 # gem 'sidekiq'
 # gem 'delayed_job'
 
