@@ -4,6 +4,25 @@ require 'sinatra/base'
 # Add your documentation for the HTTP service here.
 class Service < Sinatra::Base
   ##
+  # GET /ping
+  #
+  # ## Request Parameters:
+  #
+  #   None.
+  #
+  # ## Response Code
+  #
+  #   200
+  #
+  # ## Response Body:
+  #
+  #   {}
+  #
+  get '/ping', provides: :json do
+    [200, {}.to_json]
+  end
+
+  ##
   # Stub for a collection of documents.
   # Remove when starting real implementation.
   #
