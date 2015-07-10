@@ -3,8 +3,8 @@ require 'sinatra/base'
 
 # Add your documentation for the HTTP service here.
 class Service < Sinatra::Base
-  # Configure Sidekiq to notify Airbrake about exceptions...
-  configure { use Airbrake::Sinatra }
+  # Configure Sinatra to notify Airbrake about exceptions...
+  use Airbrake::Sinatra
 
   ##
   # GET /ping
