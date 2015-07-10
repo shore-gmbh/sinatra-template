@@ -17,6 +17,8 @@ gem 'kaminari'
 # gem 'sequel'
 # gem 'pg'
 
+gem 'airbrake', '>= 4.1.0'
+
 group :development do
   gem 'rake', '~> 10.0'
   gem 'rubocop', '>= 0.31.0', require: false
