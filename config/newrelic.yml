@@ -3,30 +3,30 @@
 # more information, visit www.newrelic.com.
 #
 # Generated July 10, 2015
-common: &default_settings
+defaults: &defaults
   # Required license key associated with your New Relic account.
   license_key: "<%= ENV['NEW_RELIC_LICENSE_KEY'] %>"
 
   log_level: info
 
 development:
-  <<: *default_settings
+  <<: *defaults
   app_name: "<%= ENV['NEW_RELIC_APP_NAME'] %> (Development)"
   monitor_mode: false
 
 test:
-  <<: *default_settings
+  <<: *defaults
   app_name: "<%= ENV['NEW_RELIC_APP_NAME'] %> (Test)"
   monitor_mode: false
 
 edge:
-  <<: *default_settings
+  <<: *defaults
   app_name: "<%= ENV['NEW_RELIC_APP_NAME'] %> (Edge)"
 
 staging:
-  <<: *default_settings
+  <<: *defaults
   app_name: "<%= ENV['NEW_RELIC_APP_NAME'] %> (Staging)"
 
 production:
-  <<: *default_settings
+  <<: *defaults
   app_name: "<%= ENV['NEW_RELIC_APP_NAME'] %> (Production)"
