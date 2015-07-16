@@ -17,7 +17,9 @@ gem 'kaminari'
 # gem 'sequel'
 # gem 'pg'
 
-gem 'airbrake', '>= 4.1.0'
+# Exception and Performance Tracking:
+gem 'airbrake',     '>= 4.1.0'
+gem 'newrelic_rpm', '>= 3.11.2.286'
 
 group :development do
   gem 'rake', '~> 10.0'

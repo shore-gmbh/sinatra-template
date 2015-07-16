@@ -31,3 +31,17 @@ This project uses two hooks:
    fix all offenses and try again.
 
 [1]: https://github.com/brigade/overcommit
+
+## Configuration in Deployment Environments
+
+This template expects the following environment variables:
+
+ * `RACK_ENV` - one of `'edge'`, `'staging'`, or `'production'`.
+ * `AIRBRAKE_API_KEY` - shared secret for [Airbrake][1].
+ * `NEW_RELIC_LICENSE_KEY` - shared secret for [NewRelic RPM][2].
+ * `NEW_RELIC_APP_NAME` - name of the application in the NewRelic Web UI.
+ * `NEW_RELIC_LOG` - defines how the NewRelic Gem logs. Should always be set to
+   `'stdout'` on Heroku.
+
+[1]: https://airbrake.io
+[2]: https://rpm.newrelic.com
