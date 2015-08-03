@@ -1,0 +1,3 @@
+AllCops:
+  Exclude:
+    - '.git-hooks/**/*'
