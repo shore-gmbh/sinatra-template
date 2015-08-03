@@ -16,6 +16,8 @@
 CommitMsg:
   ALL:
     enabled: false
+  AddTicketId:
+    enabled: true
 
 PreCommit:
   RuboCop:

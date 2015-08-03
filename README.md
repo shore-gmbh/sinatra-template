@@ -20,6 +20,9 @@ our Git Hooks:
 
 ```sh
 $ bundle exec overcommit --install
+$ # We are using a custom pre-commit hook for overcommit: It has to be "signed"
+$ # before overcommit executes it...
+$ bundle exec overcommit --sign commit-msg
 ```
 
 This project uses two hooks:

@@ -23,8 +23,8 @@ gem 'newrelic_rpm', '>= 3.11.2.286'
 
 group :development do
   gem 'rake', '~> 10.0'
-  gem 'rubocop', '>= 0.31.0', require: false
-  gem 'overcommit', '>= 0.25.0', require: false
+  gem 'rubocop', '>= 0.32.1', require: false
+  gem 'overcommit', '>= 0.27.0', require: false
 end
 
 group :test, :development do
