@@ -11,9 +11,7 @@ server and all required background jobs with a single command:
 $ foreman start -p 5000
 ```
 
-[1]: https://github.com/ddollar/foreman
-
-## Git Hooks (powered by [overcommit][1])
+## Git Hooks (powered by [overcommit][2])
 
 You have the run the following command after cloning this repository to activate
 our Git Hooks:
@@ -33,18 +31,18 @@ This project uses two hooks:
    codebase. Your commit is rejected if `rubocop` detected any offenses. Please
    fix all offenses and try again.
 
-[1]: https://github.com/brigade/overcommit
-
 ## Configuration in Deployment Environments
 
 This template expects the following environment variables:
 
  * `RACK_ENV` - one of `'edge'`, `'staging'`, or `'production'`.
- * `AIRBRAKE_API_KEY` - shared secret for [Airbrake][1].
- * `NEW_RELIC_LICENSE_KEY` - shared secret for [NewRelic RPM][2].
+ * `AIRBRAKE_API_KEY` - shared secret for [Airbrake][3].
+ * `NEW_RELIC_LICENSE_KEY` - shared secret for [NewRelic RPM][4].
  * `NEW_RELIC_APP_NAME` - name of the application in the NewRelic Web UI.
  * `NEW_RELIC_LOG` - defines how the NewRelic Gem logs. Should always be set to
    `'stdout'` on Heroku.
 
-[1]: https://airbrake.io
-[2]: https://rpm.newrelic.com
+[1]: https://github.com/ddollar/foreman
+[2]: https://github.com/brigade/overcommit
+[3]: https://airbrake.io
+[4]: https://rpm.newrelic.com
