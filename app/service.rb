@@ -93,4 +93,9 @@ class Service < Sinatra::Base
 
     jbuilder :show
   end
+
+  not_found do
+    content_type 'application/json'
+    [404, '{}']
+  end
 end
